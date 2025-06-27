@@ -357,3 +357,4 @@ export async function GET(request: NextRequest) {
     return new Response('Error generating card', { status: 500 });
   }
 } 
+

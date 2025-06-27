@@ -1,103 +1,101 @@
-# Chosn - Premium Developer Talent Marketplace
+# Chosn Platform
 
-A modern platform connecting elite developers with industry-leading companies. Built with Next.js, Supabase, and TypeScript.
+A modern talent matching platform connecting verified developers with top companies.
 
-## Features
+## 🚀 Quick Start
 
-- **Elite Developer Profiles**: Comprehensive profiles with skills, projects, and experience
-- **AI-Powered Matching**: Smart algorithms to connect developers with perfect opportunities
-- **Real-time Analytics**: Detailed insights into profile performance and market trends
-- **Secure Authentication**: Supabase-powered auth with role-based access control
-- **Responsive Design**: Beautiful, accessible UI that works on all devices
-
-## Tech Stack
-
-- **Frontend**: Next.js 13, React, TypeScript, Tailwind CSS
-- **Backend**: Supabase (PostgreSQL, Auth, Real-time)
-- **State Management**: Redux Toolkit, React Query
-- **UI Components**: Shadcn/ui, Radix UI
-- **Animations**: Framer Motion
-- **Icons**: Lucide React
-
-## Getting Started
-
-### Prerequisites
-
-- Node.js 18+ 
-- npm or yarn
-- Supabase account
-
-### Installation
-
-1. Clone the repository:
 ```bash
-git clone https://github.com/your-username/chosn-platform.git
-cd chosn-platform
-```
-
-2. Install dependencies:
-```bash
+git clone <repo-url>
+cd chosn
 npm install
-```
-
-3. Set up environment variables:
-```bash
-cp .env.local.example .env.local
-```
-
-4. Update `.env.local` with your Supabase credentials:
-```env
-NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url
-NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
-```
-
-5. Set up the database:
-   - Go to your Supabase dashboard
-   - Navigate to the SQL Editor
-   - Run the migration script from `supabase/migrations/create_initial_schema.sql`
-
-6. Start the development server:
-```bash
+cp env.example .env.local
 npm run dev
 ```
 
-7. Open [http://localhost:3000](http://localhost:3000) in your browser
+Open [http://localhost:3000](http://localhost:3000) to view the application.
 
-## Database Schema
+## 📁 Project Structure
 
-The platform uses a comprehensive PostgreSQL schema with the following main tables:
+```
+chosn/
+├── app/                    # Next.js App Router (Pages & API)
+│   ├── auth/              # Authentication pages (/auth/login, /auth/signup)
+│   ├── dashboard/         # Dashboard pages (/dashboard/*)
+│   ├── pages/            # Main pages (/pages/developers, /pages/companies)
+│   ├── api/              # API routes (/api/*)
+│   ├── page.tsx          # Home page (/)
+│   ├── layout.tsx        # Root layout
+│   └── globals.css       # Global styles
+│
+├── components/            # Reusable UI Components
+│   ├── ui/               # Base components (buttons, inputs, cards)
+│   ├── layout/           # Layout components (header, footer, sidebar)
+│   └── features/         # Feature-specific components
+│
+├── lib/                  # Utilities & Business Logic
+│   ├── api/              # API client functions
+│   ├── hooks/            # Custom React hooks
+│   ├── store/            # Redux/Zustand store
+│   ├── validations/      # Zod schemas
+│   └── utils.ts          # Helper functions
+│
+├── docs/                 # Documentation
+│   ├── setup.md          # Setup guide
+│   ├── api.md            # API documentation
+│   └── deployment.md     # Deployment guide
+│
+├── tests/                # All Tests
+│   ├── components/       # Component tests
+│   ├── api/              # API tests
+│   └── e2e/              # End-to-end tests
+│
+└── public/               # Static Assets
+```
 
-- `profiles` - User profiles (developers and companies)
-- `developer_profiles` - Extended developer information
-- `company_profiles` - Extended company information
-- `skills` - Master skills list
-- `user_skills` - User-skill relationships
-- `projects` - Developer portfolio projects
-- `matches` - Job matches between developers and companies
-- `match_responses` - Developer responses to matches
-- `analytics_events` - User activity tracking
+## 🛠️ Technology Stack
 
-## API Endpoints
+- **Framework**: Next.js 13+ (App Router)
+- **Database**: Supabase (PostgreSQL)
+- **Authentication**: Supabase Auth + GitHub OAuth
+- **Styling**: Tailwind CSS + shadcn/ui
+- **State Management**: Redux Toolkit
+- **Payments**: Stripe
+- **Email**: Resend
+- **Deployment**: Vercel
 
-The platform provides several API services:
+## 🔧 Development
 
-- **Authentication**: Login, signup, logout, session management
-- **Profiles**: CRUD operations for developer and company profiles
-- **Matching**: AI-powered job matching and response handling
-- **Analytics**: Performance metrics and market insights
+```bash
+npm run dev          # Start development server
+npm run build        # Build for production
+npm run test         # Run tests
+npm run lint         # Lint code
+npm run test:e2e     # Run end-to-end tests
+```
 
-## Contributing
+## 📚 Documentation
+
+- [Setup Guide](./docs/setup.md) - Complete setup instructions
+- [API Documentation](./docs/api.md) - API endpoints and usage
+- [Deployment Guide](./docs/deployment.md) - Production deployment
+
+## 🚢 Deployment
+
+The application is configured for deployment on:
+- **Vercel** (recommended)
+- **Railway**
+- **Docker**
+
+See [deployment guide](./docs/deployment.md) for detailed instructions.
+
+## 🤝 Contributing
 
 1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/amazing-feature`
-3. Commit your changes: `git commit -m 'Add amazing feature'`
-4. Push to the branch: `git push origin feature/amazing-feature`
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## License
+## 📝 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Support
-
-For support, email support@chosn.com or join our Discord community.
+This project is proprietary and confidential.

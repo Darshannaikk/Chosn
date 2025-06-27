@@ -2,10 +2,10 @@ import { Resend } from 'resend';
 import { render } from '@react-email/render';
 
 // Email templates
-import { NewMessageEmail } from '@/emails/new-message';
-import { MatchInterestEmail } from '@/emails/match-interest';
-import { WelcomeEmail } from '@/emails/welcome';
-import { SubscriptionEmail } from '@/emails/subscription';
+import { NewMessageEmail } from '@/lib/new-message';
+import { MatchInterestEmail } from '@/lib/match-interest';
+import { WelcomeEmail } from '@/lib/welcome';
+import { SubscriptionEmail } from '@/lib/subscription';
 
 export interface EmailOptions {
   to: string;

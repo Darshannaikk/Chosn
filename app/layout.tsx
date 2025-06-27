@@ -3,8 +3,8 @@ import type { Metadata } from 'next';
 import { Inter, JetBrains_Mono } from 'next/font/google';
 import { ThemeProvider } from '@/components/theme-provider';
 import { Toaster } from '@/components/ui/sonner';
-import { QueryProvider } from '@/components/providers/query-provider';
-import { ReduxProvider } from '@/components/providers/redux-provider';
+import { QueryProvider } from '@/components/query-provider';
+import { ReduxProvider } from '@/components/redux-provider';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import Script from 'next/script';
@@ -272,3 +272,4 @@ export default function RootLayout({
     </html>
   );
 }
+
